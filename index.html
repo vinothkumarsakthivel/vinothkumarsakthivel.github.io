@@ -1,307 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <title>Design Thinking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
+<style>
+  .underlineHover:after {
+            display: block;
+            left: 0;
+            bottom: -10px;
+            width: 0;
+            height: 2px;
+            background-color: #0d0d0d;
+            content: "";
+            transition: width 0.4s;
+        }
+
+        .underlineHover:hover {
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .underlineHover:hover:after {
+            width: 100%;
+        }
+</style>
+
 <body>
-    
-  <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/trace.svg" alt="design thinking">
+    <p style="color:rgb(255, 167, 4);" >Design Thinking</p>
+ 
+  </a>
+  <p class="device-notification--message" style="color:rgb(255, 167, 4);">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
 
-    <aside class="sidebar" data-sidebar>
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/trace.svg" style="width:100px">
+            <p style="color:rgb(255, 167, 4);">Design Thinking</p>
+          </a>
 
-      <div class="sidebar-info">
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span style="color:rgb(255, 167, 4);">Home</span></li>
+            <li><span style="color: rgb(255, 167, 4);">Phase of DT</span></li>
+            <li><span style="color:rgb(255, 167, 4);">Index</span></li>
+            <!-- <li><span style="color:rgb(255, 167, 4);"><a style="color:rgb(255, 167, 4);text-decoration-line: none;" href="login.html">Login</a></span></li>
+            <li><span style="color:rgb(255, 167, 4);"><a style="color:rgb(255, 167, 4);text-decoration-line: none;" href="register.html">Register</a></span></li> -->
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="VinothKumar Sakthivel" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">VinothKumar Sakthivel</h1>
-
-          <p class="title">Web & App developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:svinothkumar0301@gmail.com" class="contact-link">svinothkumar0301@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+916382169091" class="contact-link">+916382169091</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="2001-11-03">November 03, 2001</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>1/173,Pudhu Kadu,Pokkampalayam,<br>
-                Kumaramanagalam,
-                <br>Tiruchengode,<br>
-                Namakkal</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/SVK5227D" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/vinothk02977938" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/vinothkumar0301/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-        <!--
-          - #NAVBAR
-        -->
-  
-        <nav class="navbar">
-  
-          <ul class="navbar-list">
-  
-            <li class="navbar-item">
-                <a href="index.html">
-              <button class="navbar-link  active" href="index.html">Home</button>
-            </a>
-            </li>
-  
-            <li class="navbar-item">
-                <a href="Education.html">
-                    <button class="navbar-link  active" href="Education.html">Education</button>
-                  </a>
-            </li>
-  
-            <li class="navbar-item">
-                <a href="Skills.html">
-                    <button class="navbar-link  active" href="Skill.html">Skill</button>
-                  </a>
-            </li>
-
-            <li class="navbar-item">
-                <a href="Contact.html">
-                    <button class="navbar-link  active" href="Contact.html">Contact</button>
-                  </a>
-            </li>
-  
           </ul>
-  
         </nav>
-  
-  
-  
-  
-  
-        <!--
-          - #ABOUT
-        -->
-  
-        <article class="about  active" data-page="about">
-  
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-  
-          <section class="about-text">
-            <p>
-              I am a web and app developer with experience in developing websites and applications for all kinfd of businesses.
-              I enjoy
-              turning complex problems into simple, beautiful and intuitive designs.
-            </p>
-  
-            <p>
-              My job is to build your website and application so that it is functional and user-friendly but at the same time attractive.
-              My aim is to bring across your
-              message and identity in the most creative way.
-            </p>
-          </section>
-  
-  
-          <!--
-            - service
-          -->
-  
-          <section class="service">
-  
-            <h3 class="h3 service-title">What i'm doing</h3>
-  
-            <ul class="service-list">
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="./assets/images/icon-design.svg
-                  " alt="design icon" width="40">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web design</h4>
-  
-                  <p class="service-item-text">
-                    The most modern and high-quality design made at a professional level.
-                  </p>
-                </div>
-  
-              </li>
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web development</h4>
-  
-                  <p class="service-item-text">
-                    High-quality development of sites at the professional level.
-                  </p>
-                </div>
-  
-              </li>
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Mobile apps</h4>
-  
-                  <p class="service-item-text">
-                    Professional development of applications for Android.
-                  </p>
-                </div>
-  
-              </li>
-            </ul>
-  
-          </section>   
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Star your <br>journey towards <br>Design Thinking</h1>
+                <button class="cta"><a link href="login.html" style="color:rgb(255, 167, 4);">Login</a>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <button class="cta"><a link href="register.html" style="color:rgb(255, 167, 4);">Register</a>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="assets/img/Untitled design (17).svg" style="width: 400px; height: 450px; margin-top: 50px;" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3 style="color:rgb(255, 167, 4);">Stay with us.</h3>
+                  
+                </a>
+                <a href="#0">
+                  <h3 style="color:rgb(255, 167, 4);">Connect with us.</h3>
+                  
+                </a>
+                <a href="#0">
+                  <h3 style="color:rgb(255, 167, 4);">Grow with us</h3>
+                  
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2 style="color:rgb(255, 167, 4);">Phase of DT</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/emphathy.svg" alt="Emphathize">
+                      </div>
+                      <p class="slider--item-title" style="color:rgb(255, 167, 4);">Empathize</p>
+                      <p class="slider--item-description" style="color:rgb(255, 167, 4);">Understand what the problem you think.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/define.svg" alt="Define">
+                      </div>
+                      <p class="slider--item-title" style="color:rgb(255, 167, 4);">Define</p>
+                      <p class="slider--item-description" style="color:rgb(255, 167, 4);">Organize the information what you have collected in Empathize stage.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/ideate (2).svg" alt="Ideate">
+                      </div>
+                      <p class="slider--item-title" style="color:rgb(255, 167, 4);">Ideate</p>
+                      <p class="slider--item-description" style="color:rgb(255, 167, 4);">Make an idea for your collected information.</p>
+                    </a>
+                  </li>
+                <li class="slider--item slider--item-right">
+                  <a href="#0">
+                    <div class="slider--item-image">
+                      <img src="assets/img/prototyping (2).svg" alt="Prototype">
+                    </div>
+                    <p class="slider--item-title" style="color:rgb(255, 167, 4);">Prototype</p>
+                    <p class="slider--item-description" style="color:rgb(255, 167, 4);">Make your working model for that idea you described.</p>
+                  </a>
+                </li>
+                <li class="slider--item slider--item-left">
+                  <a href="#0">
+                    <div class="slider--item-image">
+                      <img src="assets/img/testing (2).svg" alt="Testing">
+                    </div>
+                    <p class="slider--item-title" style="color:rgb(255, 167, 4);">Testing</p>
+                    <p class="slider--item-description" style="color:rgb(255, 167, 4);">Test your Prototype  to check it works correctly or not.</p>
+                  </a>
+                </li>
+              </ul>
+               <div class="slider--prev">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+              <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+              c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+              c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+            </g>
+            </svg>
+          </div>
+             
           
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active" style="color:rgb(255, 167, 4);">Home</li>
+    <li style="color:rgb(255, 167, 4)">Phase of DT</li>
+    <li style="color:rgb(255, 167, 4)">Index</li>
+    <li style="color:rgb(255, 167, 4)"><a style="color:rgb(255, 167, 4);text-decoration-line: none;" href="login.html">Login</a> </li>
+    <li style="color:rgb(255, 167, 4)"><a style="color:rgb(255, 167, 4);text-decoration-line: none;" href="register.html">Register</a></li>
+    </ul>
+</div>
 
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
 </body>
-
 </html>
